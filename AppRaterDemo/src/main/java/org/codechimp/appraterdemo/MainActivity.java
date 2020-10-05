@@ -20,16 +20,12 @@ import java.util.concurrent.Callable;
 
 public class MainActivity extends Activity {
 
-	private Button buttonTest;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);		
-		
-		buttonTest = (Button) findViewById(R.id.button1);
-		
-		buttonTest.setOnClickListener(new OnClickListener() {
+		setContentView(R.layout.activity_main);
+
+        findViewById(R.id.button1).setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				
 				// This forces display of the rate prompt.
@@ -73,11 +69,9 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
-        switch (item.getItemId()) {
-            case (R.id.menu_ratenow): {
-                AppRater.rateNow(this);
-                return true;
-            }
+        if (item.getItemId() == R.id.menu_ratenow) {
+            AppRater.rateNow(this);
+            return true;
         }
         return false;
     }
