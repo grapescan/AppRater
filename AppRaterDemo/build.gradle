@@ -30,7 +30,8 @@ android {
 }
 
 dependencies {
-    compile project(':AppRater')
+    implementation project(':AppRater')
+    //implementation("androidx.legacy:legacy-support-v4:")
 }
 
 
