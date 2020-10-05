@@ -1,3 +1,6 @@
+This fork adds ability to intercept button clicks to customize the behavior.
+I'd like to merge it into original repo, but it looks abandoned unfortunately.
+
 # AppRater
 
 AppRater is a library for Android designed to facilitate easy prompting of users to rate your app within the Google Play store or Amazon App Store.
